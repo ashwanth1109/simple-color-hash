@@ -1,14 +1,9 @@
 import { assert } from 'chai';
-import defaultAwesomeFunction, { awesomeFunction } from '../src';
+import generateColorHash from '../src';
 
-describe('Awesome test.', () => {
-  it('should test default awesome function', () => {
-    const expectedVal = 'I am the Default Awesome Function, fellow comrade! - Dinesh';
-    assert(defaultAwesomeFunction('Dinesh') === expectedVal, 'Default not awesome :(');
-  });
-
-  it('should test awesome function', () => {
-    const expectedVal = 'I am just an Awesome Function';
-    assert(awesomeFunction() === expectedVal, 'Named awesome :(');
+describe('Color Hash Test', () => {
+  it('should test color hash generation', () => {
+    const expectedVal = '#541245';
+    assert(generateColorHash({ str: 'Ashwanth A R' }) === expectedVal, 'color hash generation incorrect');
   });
 });
